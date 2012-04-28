@@ -1,0 +1,28 @@
+{
+    "name": "workshop",
+    "version": "0.0.1",
+    "description": "A Workshop Registration app",
+    "attachments": "static",
+    "modules": ["lib"],
+    "load": "lib/app",
+    "duality": {
+	"base_template": "base.html"
+    },
+    "dust": {
+	"templates": "templates"
+    },
+    "dependencies": {
+	"properties":   null,
+	"modules":      null,
+	"settings":     null,
+	"attachments":  null,
+	"dust":         null,
+	"duality":      null,
+	"duality-dust": null,
+	"couchtypes":   null,
+	"querystring":  null,
+	"session":      null,
+        "db":           null,
+	"events":       null
+    }
+}

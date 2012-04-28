@@ -1,0 +1,16 @@
+<!-- copyright 2012 Morton Swimmer (and others) and released under -->
+<!-- the MIT license. -->
+<h1>Delegates</h1>
+
+<p><a href="{baseURL}/">Startpage</a></p>
+<p><a href="{baseURL}/add_delegate">Add new delegate</a></p>
+
+{?rows}
+  <ul>
+  {#rows}
+    <li><a href="{baseURL}/{id}">{value}</a></li>
+  {/rows}
+    </ul>
+  {:else}
+  <p>No delegates</p>
+{/rows}

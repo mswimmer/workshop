@@ -1,0 +1,64 @@
+<!-- copyright 2012 Morton Swimmer (and others) and released under -->
+<!-- the MIT license. -->
+<section id="delegate_data">
+  <header id="page_header">
+    <h1>{title}</h1>
+    <nav>
+      <ul>
+	<li>
+	  <!--a href="{baseURL}/change_delegate/{_id}">Change delegate
+  information</a-->
+	  <form method="GET" action="{baseURL}/change_delegate/{_id}">
+	    <input type="submit" value="Update" />
+	  </form>
+	</li>
+	<li><form method="POST" action="{baseURL}/delete/{_id}">
+	    <input type="submit" value="Delete" />
+	</form></li>
+	<li><form method="GET" action="{baseURL}/badge/{_id}">
+	    <input type="submit" value="Badge" />
+	</form></li>
+      </ul>
+    </nav>
+  </header>
+  <table>
+    <tr><td>timestamp</td><td>{timestamp}</td></tr>
+    <tr><td>salutation</td><td>{salutation}</td></tr>
+    <tr><td>title</td><td>{title}</td></tr>
+    <tr><td>firstname</td><td>{firstname}</td></tr>
+    <tr><td>lastname</td><td>{lastname}</td></tr>
+    <tr><td>badgename</td><td>{badgename}</td></tr>
+    <tr><td>email</td><td>{email}</td></tr>
+    <tr><td>telephone</td><td>{telephone}</td></tr>
+    <tr><td>fax</td><td>{telephone}</td></tr>
+    <tr><td>company</td><td>{company}</td></tr>
+    <tr><td>department</td><td>{department}</td></tr>
+    <tr><td>address</td><td>{address}</td></tr>
+    <tr><td>address</td><td>{addressext}</td></tr>
+    <tr><td>city</td><td>{city}</td></tr>
+    <tr><td>zipcode</td><td>{zipcode}</td></tr>
+    <tr><td>country</td><td>{country}</td></tr>
+    <tr><td>fee</td><td>{fee}</td></tr>
+    <tr><td>due</td><td>{due}</td></tr>
+    <tr><td>paid</td><td>{paid}</td></tr>
+    <tr><td>notes</td><td>{notes}</td></tr>
+    <tr><td>payment</td><td>{payment}</td></tr>    
+    <tr><td>extra_dinner</td><td>{extra_dinner}</td></tr>
+    <tr><td>extra_vegetarian</td><td>{extra_vegetarian}</td></tr>
+    <tr><td>main_vegetarian</td><td>{main_vegetarian}</td></tr>
+    <tr><td>sunday_drink</td><td>{sunday_drink}</td></tr>
+    <tr><td>weihenstephan_tour</td><td>{weihenstephan_tour}</td></tr>
+    <tr><td>speaker</td><td>{speaker}</td></tr>
+    <tr><td>lightning_speaker</td><td>{lightning_speaker}</td></tr>
+    <tr><td>crew</td><td>{crew}</td></tr>
+    <tr><td>privacy opt-in</td><td>{opt_in}</td></tr>
+    <tr><td>cancellationpolicy_ack</td><td>{cancellationpolicy_ack}</td></tr>
+    <tr><td>letterofinvitation</td><td>{letterofinvitation}</td></tr>
+    <tr><td>shirtsize</td><td>{shirtsize}</td></tr>
+    <tr><td>notes</td><td>{notes}</td></tr>
+  </table>
+  <footer id="delegate_footer">
+    <p>Id: {_id}</p>
+    <p>Rev: {_rev}</p>
+  </footer>
+</section>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- copyright 2012 Morton Swimmer (and others) and released under -->
+<!-- the MIT license. -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-US"> 
+  <head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    <link rel="stylesheet" href="{baseURL}/static/css/base.css" />
+    <title>{title}</title> 
+  </head> 
+  <body>
+    <header id="page_header">
+      <nav>
+	<ul>
+	  <li><a href="{baseURL}/">HOME</a></li>
+	  <li><a href="{baseURL}/delegates">List all delegates</a></li>
+	  <li><a href="{baseURL}/by_lastname">By last name</a></li>
+	  <li><a href="{baseURL}/by_firstname">By first name</a></li>
+	  <li><a href="{baseURL}/speakers">Speakers</a></li>
+	  <li><a href="{baseURL}/non_speakers">Non speakers</a></li>
+	  <li><a href="{baseURL}/crew">Crew</a></li>
+	  <li><a href="{baseURL}/email">Email</a></li>
+	</ul>
+      </nav>
+      <div id="session-menu"></div>
+      <ul id="stats">
+	<li id="all_count"></li>
+	<li id="non_speaker_count"></li>
+	<li id="speaker_count"></li>
+      </ul>
+    </header>
+    <div id="content">
+      {content|s}
+    </div>
+    <footer id="page_footer">
+      <nav>
+	<ul>
+	  <li><a href="{baseURL}/login">Login</a></li>
+	  <li><a href="{baseURL}/logout">Logout</a></li>
+	  <li><a href="{baseURL}/add_delegate">Add delegate</a></li>
+	</ul>
+      </nav>
+    </footer>
+    <script src="{baseURL}/static/js/jquery-1.5.2.min.js"></script>
+    <script src="{baseURL}/static/js/json2.js"></script>
+    <script src="{baseURL}/modules.js"></script>
+    <script src="{baseURL}/duality.js"></script>
+  </body>
+</html>

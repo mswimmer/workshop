@@ -1,0 +1,13 @@
+<!-- copyright 2012 Morton Swimmer (and others) and released under -->
+<!-- the MIT license. -->
+<br>session menu</br>
+{#userCtx.name}
+    <br>Logged in as</br>
+    <h2>{.}</h2>
+{:else}
+    <form action="/login" method="post" class="pull-right">
+    <input name="user" type="text"/>
+    <input name="pass" type="password"/>
+    <button type="submit">Sign in</button>
+  </form>
+{/userCtx.name}

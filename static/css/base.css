@@ -1,0 +1,91 @@
+/* copyright 2012 Morton Swimmer (and others) and released under
+ * the MIT license.
+ */
+
+/*START:remove_default_styling*/
+table{
+  width: 100%; 
+  border-collapse: collapse; 
+} 
+
+th, td { 
+  border: none;
+}
+/*END:remove_default_styling*/
+
+/*START:color_header */
+th {
+  background-color: #000; 
+  color: #fff;
+}
+/*END:color_header */
+
+/*START:table_stripe*/
+tr:nth-of-type(even){
+  background-color: #F3F3F3;
+}
+tr:nth-of-type(odd) {
+  background-color:#ddd;
+}
+/*END:table_stripe*/
+
+/*START:right-align */
+td:nth-child(1){
+  text-align: right;
+}
+/*END:right-align */
+
+/*START:bold-last-col */
+
+td:last-child {
+    font-weight: bolder;
+}
+/*END:bold-last-col */
+
+footer#delegate_footer { 
+    font-size: 8px;
+    clear: both;
+    width: 100%; 
+    display: block; 
+    text-align: center;
+}
+
+/* nav bar stuff */
+
+header#page_header nav ul, 
+footer#page_footer nav ul { 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header#page_header nav ul li, 
+footer#page_footer nav ul li { 
+    padding:0;
+    margin: 0 20px 0 0;
+    display:inline;
+}
+
+/* END nav bar stuff */
+
+ul#stats {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul#stats li {
+    padding:0;
+    margin: 0 20px 0 0;
+    display:inline;
+}
+
+div#logged-in {
+    font-size: 10px;
+    background-color: lightblue;
+}
+
+div#not-logged-in {
+    font-size: 10px;
+    background-color: red;
+}
+
