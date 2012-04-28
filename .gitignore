@@ -1,8 +1,8 @@
-./.DS_Store
-./lib/.DS_Store
-./packages/.DS_Store
-./static/.DS_Store
-./static/css/.DS_Store
-./static/js/.DS_Store
-./templates/.DS_Store
-./packages/*
+.DS_Store*
+lib/.DS_Store
+packages/.DS_Store
+static/.DS_Store
+static/css/.DS_Store
+static/js/.DS_Store
+templates/.DS_Store
+packages
