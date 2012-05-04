@@ -1,43 +1,36 @@
 <!-- copyright 2012 Morton Swimmer (and others) and released under -->
 <!-- the MIT license. -->
-<section id="badge_data">
-  <div id="backside">
+<section id="badge_data" class="badge_columns">
+  <section id="backside" class="badge_left">
     <!-- img id="backside_background_image"
 	 src="{baseURL}/static/images/badge_backside.png" alt=""-->
     <p></p>
-    <div class="push"></div>
-  </div>
-  <div id="frontside">
-    <div class="wrapper">
-      {?speaker}
-      <p id="badge_name_speaker">{badgename}</p>
-      {:else}
-      <p id="badge_name">{badgename}</p>
-      {/speaker}
-      <p id="badge_company">{company}</p>
-      <ul id="badge_bar">
-	{?speaker}
-	<li id="badge_bar_speaker">SPEAKER</li>
-	{/speaker}
-	{?lightning_speaker}
-	<li id="badge_bar_lspeaker">LIGHTNING SPEAKER</li>
-	{/lightning_speaker}
-	{?crew}
-	<li id="badge_bar_crew">CREW</li>
-	{/crew}
-	{?weihenstephan_tour}
-	<li id="badge_bar_social">Weihenstephan Tour</li>
-	{/weihenstephan_tour}
-      </ul>
-    </div>
-    <div class="push"></div>
-    <footer id="badge_column_footer"  class="footer">
-      <ul id="badge_footer_bar">
-	<li id="badge_footer_logo">
+  </section>
+  <section id="frontside" class="badge_right">
+    {?speaker}
+    <p id="badge_name_speaker">{badgename}</p>
+    {:else}
+    <p id="badge_name">{badgename}</p>
+    {/speaker}
+    <p id="badge_company">{company}</p>
+    {?speaker}
+    <p id="badge_bar_speaker">SPEAKER</p>
+    {/speaker}
+    {?lightning_speaker}
+    <p id="badge_bar_lspeaker">LIGHTNING SPEAKER</p>
+    {/lightning_speaker}
+    {?crew}
+    <p id="badge_bar_crew">CREW</p>
+    {/crew}
+    {?weihenstephan_tour}
+    <p id="badge_bar_social">Weihenstephan Tour</p>
+    {/weihenstephan_tour}
+
+    <footer id="badge_column_footer"  class="badge_bar">
+	<p id="badge_footer_logo">
 	  <img id="badge_logo" src="{baseURL}/static/images/logo.png"
 	       alt="">
-	</li>
-      </ul>
+	</p>
     </footer>
-  </div>
+  </section>
 </section>

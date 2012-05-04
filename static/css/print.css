@@ -5,21 +5,113 @@
 @media print {
     @page {
 /*	margin: 27mm 16mm 27mm 16mm;*/
-	size: 15cm 10cm;
-	
+	margin: 0;
+/*	size: 15cm 10cm; */
+	size: 6in 4in;
     }
 
     html { 
 	margin: 0;
-	font: 24pt/1.26 "Gill Sans", sans-serif;
+/*	font: 24pt/1.26 "Gill Sans", sans-serif;*/
     }
 
     body {
 	margin: 0 0 0 28%;
+/*	width: 15cm;
+	height: 10cm;*/
+	background: white;
+	-webkit-print-color-adjust: exact;
+    }
+    * {
+	margin: 0;
+      }
+    
+    .badge_columns {
+	position: relative; 
+	background: white; 
+	float: left;
 	width: 15cm;
 	height: 10cm;
+	margin: 0;
+	padding: 0;
     }
-
+    .badge_right {
+	float: right; 
+	width: 50%;
+	height: 100%;
+	background-image: -moz-linear-gradient(
+	    top, #fff, #efefef
+	);
+	background-image: -webkit-gradient(
+	    linear,left top, left bottom,
+	    color-stop(0, #fff),
+	    color-stop(1, #efefef)
+	);
+	background-image: linear-gradient(
+	    top, #fff, #efefef
+	);
+    }
+    .badge_left {
+	float: left; 
+	width: 50%;
+	height: 100%;
+	background: blue;
+    }
+    .badge_bar {
+	width: 50%; 
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	background: white; 
+	background: -moz-linear-gradient(left, lightgreen 0%, #ffffff 35%, #ffffff 65%, lightgreen 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,lightgreen), color-stop(35%,#ffffff), color-stop(65%,#ffffff), color-stop(100%,lightgreen));
+	background: -webkit-linear-gradient(left, lightgreen 0%,#ffffff 35%,#ffffff 65%,lightgreen 100%);
+	background: -o-linear-gradient(left, lightgreen 0%,#ffffff 35%,#ffffff 65%,lightgreen 100%);
+	background: -ms-linear-gradient(left, lightgreen 0%,#ffffff 35%,#ffffff 65%,lightgreen 100%); 
+	background: linear-gradient(left, lightgreen 0%,#ffffff 35%,#ffffff 65%,lightgreen 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ff00', endColorstr='#00ff00',GradientType=1 ); 
+    }
+    img#badge_logo {
+	height: 1cm;
+	text-align: center;
+    }
+    p#badge_name {
+	text-align: center;
+	font-size: 48pt;
+	overflow: auto;
+    }
+    p#badge_name_speaker {
+	text-align: center;
+	font-size: 48pt;
+	overflow: auto;
+    }
+    p#badge_company {
+	text-align: center;
+	font-size: 24pt;
+    }
+    p#badge_bar_social { 
+	text-align: center;
+	background-color: lightblue;
+    }
+    p#badge_bar_crew { 
+	height: 2em;
+	font-size: 24pt;
+	text-align: center;
+	background-color: lightgreen;
+    }
+    p#badge_bar_speaker { 
+	height: 2em;
+	font-size: 24pt;
+	text-align: center;
+	background-color: yellow;
+    }
+    p#badge_bar_lspeaker { 
+	height: 2em;
+	font-size: 24pt;
+	text-align: center;
+	background-color: orange;
+    }
+/*
     #badge_data {
 	column-count: 2;
 	-moz-column-count: 2;
@@ -35,7 +127,7 @@
     header nav, footer {
 	display: none;
     }
-
+*/
         /*START:remove_default_styling*/
     table {
 	width: 100%; 
