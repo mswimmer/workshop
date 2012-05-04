@@ -1,16 +1,38 @@
 <!-- copyright 2012 Morton Swimmer (and others) and released under -->
 <!-- the MIT license. -->
 <section id="badge_data">
-  <header id="page_header">
-    <h1>{title}</h1>
-  </header>
-  <table>
-    <tr><td>badgename</td><td>{badgename}</td></tr>
-    <tr><td>company</td><td>{company}</td></tr>
-    <tr><td>sunday_drink</td><td>{sunday_drink}</td></tr>
-    <tr><td>weihenstephan_tour</td><td>{weihenstephan_tour}</td></tr>
-    <tr><td>speaker</td><td>{speaker}</td></tr>
-    <tr><td>lightning_speaker</td><td>{lightning_speaker}</td></tr>
-    <tr><td>crew</td><td>{crew}</td></tr>
-  </table>
+  <div id="backside">
+    <!-- img id="backside_background_image"
+	 src="{baseURL}/static/images/badge_backside.png" alt=""-->
+    <p> Hello world</p>
+  </div>
+  <div id="frontside">
+    <div class="wrapper">
+      {?speaker}
+      <p id="badge_name_speaker">{badgename}</p>
+      <p id="speaker_annotation">speaker</p>
+      {:else}
+      <p id="badge_name">{badgename}</p>
+      {/speaker}
+      <p id="badge_company">{company}</p>
+    </div>
+    <div class="push"></div>
+    <footer id="badge_column_footer"  class="footer">
+      <ul id="badge_bar">
+	<li><img id="badge_logo" src="{baseURL}/static/images/logo.png" alt=""></li>
+	{?speaker}
+	<li id="badge_bar_speaker">SPEAKER</li>
+	{/speaker}
+	{?lightning_speaker}
+	<li id="badge_bar_lspeaker">L-SPEAKER</li>
+	{/lightning_speaker}
+	{?crew}
+	<li id="badge_bar_crew">CREW</li>
+	{/crew}
+	{?weihenstephan_tour}
+	<li id="badge_bar_social">weihenstephan_tour</li>
+	{/weihenstephan_tour}
+      </ul>
+    </footer>
+  </div>
 </section>
