@@ -4,123 +4,141 @@
 
 @media screen {
     /*START: badge specific styles */
-    html, body {
-	height: 100%;
-    }
-    #badge_data {
-	column-count: 2;
-	-webkit-column-count: 2;
-	column-gap: 20px;
-	-webkit-column-gap: 20px;
-	-webkit-column-rule: 1px solid #ddccb5;
-	column-rule: 1px solid #ddccb5;
-	min-height: 10cm;
-    }
-    section#schedule {
-	column-count: 2;
-	font-size: 8px;
-    }
-    div#backside {
-	min-height: 9.5cm;
-	background-image: url('../images/logo.png');
-	/*background-position: bottom left;*/
-	/*background-repeat: no-repeat;*/
-	/*height: 240px;*/
-    }
-    div#frontside {
-	min-height: 9.5cm;
-	-moz-column-break-before: always;
-	-webkit-column-break-before: always;
-	break-before: always;
-	/*background-color: white;*/
-	/*width: 960px;*/
-	/*float:left;*/
-	background-image: -moz-linear-gradient(
-	    top, #fff, #efefef
-	);
-	background-image: -webkit-gradient(
-	    linear,left top, left bottom,
-	    color-stop(0, #fff),
-	    color-stop(1, #efefef)
-	);
-	background-image: linear-gradient(
-	    top, #fff, #efefef
-	);
-    }
-    p#badge_name {
-	text-align: center;
-	font-size: 40pt;
-	overflow: auto;
-    }
-    p#badge_name_speaker {
-	text-align: center;
-	font-size: 40pt;
-	background-color: yellow;
-	overflow: auto;
-    }
-    p#speaker_annotation {
-	text-align: center;
-	font-size: 16pt;
-    }
-    img#backside_background_image {
-	width: 100%;
-	height: 100%;
-    }
-    #badge_data ul#badge_logo_bar { 
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	background-color: pink;
-    }
-    #badge_data ul#badge_bar li { 
-	padding:0;
-	margin: 0 20px 0 0;
-	display:inline;
-	background-color: white;
-    }
-    img#badge_logo {
-	width: 30%;
-	height: 15%;
-    }
-    footer#badge_column_footer {
-	/* clear: both; */
-	display:block;
-	bottom: 0;
-    }
-    .wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -4em;
-    }
-    .push {
-	height: 8em;
-	clear: both;
-    }
-    .footer {
-	height: 8em;
-	clear: both;
-    }
-    /*END: badge specific styles */
+      * {
+      margin: 0;
 
-    /*START:remove_default_styling*/
-    table {
-	width: 100%; 
-	border-collapse: collapse; 
-    } 
-    th, td { 
-	border: none;
-    }
+      }
+      #badge_data {
+	  height: 100%;
+	  column-count: 2;
+	  -webkit-column-count: 2;
+	  column-gap: 20px;
+	  -webkit-column-gap: 20px;
+	  -webkit-column-rule: 1px solid #ddccb5;
+	  column-rule: 1px solid #ddccb5;
+      }
 
-    /*END:remove_default_styling*/
-    
-    /*START:color_header */
-    th {
-	background-color: #000; 
-	color: #fff;
-    }
-    /*END:color_header */
-    
+      div#backside {
+	  min-height: 9.5cm;
+	  background-image: url('../images/logo.png');
+	  background-position: bottom center;
+      }
+      div#frontside {
+	  min-height: 9.5cm;
+	  -moz-column-break-before: always;
+	  -webkit-column-break-before: always;
+	  break-before: always;
+	  background-image: -moz-linear-gradient(
+	      top, #fff, #efefef
+	  );
+	  background-image: -webkit-gradient(
+	      linear,left top, left bottom,
+	      color-stop(0, #fff),
+	      color-stop(1, #efefef)
+	  );
+	  background-image: linear-gradient(
+	      top, #fff, #efefef
+	  );
+      }
+      
+      p#badge_name {
+	  text-align: center;
+	  font-size: 48pt;
+	  overflow: auto;
+      }
+      p#badge_name_speaker {
+	  text-align: center;
+	  font-size: 40pt;
+	  background-color: yellow;
+	  overflow: auto;
+      }
+      p#badge_company {
+	  text-align: center;
+	  font-size: 24pt;
+      }
+      p#speaker_annotation {
+	  text-align: center;
+	  font-size: 16pt;
+      }
+      img#backside_background_image {
+	  width: 100%;
+	  height: 100%;
+      }
+      #badge_data ul#badge_bar { 
+	  width: 100%;
+	  /*list-style: none;*/
+	  margin: 0;
+	  padding: 0;
+	  background-color: white;
+      }
+      #badge_data ul#badge_bar li { 
+	  text-align: center;
+      }
+      #badge_data ul#badge_bar li#badge_bar_social { 
+	  background-color: lightblue;
+      }
+      #badge_data ul#badge_bar li#badge_bar_crew { 
+	  height: 2em;
+	  background-color: lightgreen;
+      }
+      #badge_data ul#badge_bar li#badge_bar_speaker { 
+	  height: 2em;
+	  background-color: yellow;
+      }
+      #badge_data ul#badge_bar li#badge_bar_lspeaker { 
+	  height: 2em;
+	  background-color: orange;
+      }
+
+      #badge_data footer#badge_column_footer {
+	  margin-top: 5em;
+	  position:relative;
+	  bottom: 0px;
+	  display:block;
+	  clear: both;
+	  list-style: none;
+	  text-align: center;
+	  width: 100%;
+      }
+      #badge_data ul#badge_footer_bar { 
+	  width: 100%;
+	  /*list-style: none;*/
+	  padding: 0;
+      }
+      #badge_data ul#badge_footer_bar li#badge_footer_logo { 
+	  background: white; /* Old browsers */
+	  background: -moz-linear-gradient(left, lightgreen 0%, #ffffff 35%, #ffffff 65%, lightgreen 100%); /* FF3.6+ */
+	  background: -webkit-gradient(linear, left top, right top, color-stop(0%,lightgreen), color-stop(35%,#ffffff), color-stop(65%,#ffffff), color-stop(100%,lightgreen)); /* Chrome,Safari4+ */
+	  background: -webkit-linear-gradient(left, lightgreen 0%,#ffffff 35%,#ffffff 65%,lightgreen 100%); /* Chrome10+,Safari5.1+ */
+	  background: -o-linear-gradient(left, lightgreen 0%,#ffffff 35%,#ffffff 65%,lightgreen 100%); /* Opera 11.10+ */
+	  background: -ms-linear-gradient(left, lightgreen 0%,#ffffff 35%,#ffffff 65%,lightgreen 100%); /* IE10+ */
+	  background: linear-gradient(left, lightgreen 0%,#ffffff 35%,#ffffff 65%,lightgreen 100%); /* W3C */
+	  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ff00', endColorstr='#00ff00',GradientType=1 ); /* IE6-9 */
+      }
+      img#badge_logo {
+	  height: 3em;
+	  text-align: center;
+      }
+      /*END: badge specific styles */
+      
+      /*START:remove_default_styling*/
+      table {
+	  width: 100%; 
+	  border-collapse: collapse; 
+      } 
+      th, td { 
+	  border: none;
+      }
+      
+      /*END:remove_default_styling*/
+      
+      /*START:color_header */
+      th {
+	  background-color: #000; 
+	  color: #fff;
+      }
+      /*END:color_header */
+      
     /*START:table_stripe*/
     tr:nth-of-type(even){
 	background-color: #F3F3F3;

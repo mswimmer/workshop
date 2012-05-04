@@ -4,34 +4,39 @@
   <div id="backside">
     <!-- img id="backside_background_image"
 	 src="{baseURL}/static/images/badge_backside.png" alt=""-->
-    <p> Hello world</p>
+    <p></p>
+    <div class="push"></div>
   </div>
   <div id="frontside">
     <div class="wrapper">
       {?speaker}
       <p id="badge_name_speaker">{badgename}</p>
-      <p id="speaker_annotation">speaker</p>
       {:else}
       <p id="badge_name">{badgename}</p>
       {/speaker}
       <p id="badge_company">{company}</p>
-    </div>
-    <div class="push"></div>
-    <footer id="badge_column_footer"  class="footer">
       <ul id="badge_bar">
-	<li><img id="badge_logo" src="{baseURL}/static/images/logo.png" alt=""></li>
 	{?speaker}
 	<li id="badge_bar_speaker">SPEAKER</li>
 	{/speaker}
 	{?lightning_speaker}
-	<li id="badge_bar_lspeaker">L-SPEAKER</li>
+	<li id="badge_bar_lspeaker">LIGHTNING SPEAKER</li>
 	{/lightning_speaker}
 	{?crew}
 	<li id="badge_bar_crew">CREW</li>
 	{/crew}
 	{?weihenstephan_tour}
-	<li id="badge_bar_social">weihenstephan_tour</li>
+	<li id="badge_bar_social">Weihenstephan Tour</li>
 	{/weihenstephan_tour}
+      </ul>
+    </div>
+    <div class="push"></div>
+    <footer id="badge_column_footer"  class="footer">
+      <ul id="badge_footer_bar">
+	<li id="badge_footer_logo">
+	  <img id="badge_logo" src="{baseURL}/static/images/logo.png"
+	       alt="">
+	</li>
       </ul>
     </footer>
   </div>
