@@ -2,12 +2,33 @@
  * the MIT license.
  */
 
-@media screen {
-    /*START: badge specific styles */
-    * {
-      margin: 0;
-      }
+@media print {
+    @page {
+	margin: 0mm 0mm 0mm 0mm;
+	padding: 0;
+	size: 4in 6in landscape;
+    }
 
+    html { 
+	margin: 0;
+	size: 6in 4in landscape;
+	border: 1px solid #bbb;
+/*	font: 24pt/1.26 "Gill Sans", sans-serif;*/
+    }
+
+    body {
+	size: 6in 4in landscape;
+	width: 6in; 
+	height: 4in;
+	margin: 0 0 0 0;
+	padding: 0;
+	background: white;
+	-webkit-print-color-adjust: exact;
+    }
+    * {
+	margin: 0;
+      }
+    
     .badge_columns {
 	position: relative; 
 	background: white; 
@@ -46,7 +67,6 @@
     }
     p#badge_name {
 	text-align: center;
-	min-height: 35%;
 	font-size: 30pt;
 	overflow: auto;
 	margin-left: 0.1cm;
@@ -54,8 +74,7 @@
     }
     p#badge_name_speaker {
 	text-align: center;
-	min-height: 35%;
-	font-size: 30pt;
+	font-size: 48pt;
 	overflow: auto;
 	margin-left: 0.1cm;
 	margin-right: 0.1cm;
@@ -87,27 +106,28 @@
 	text-align: center;
 	background-color: yellow;
     }
-    p#badge_lspeaker { 
+    p#badge_bar_lspeaker { 
 	padding-top: 0.5cm;
 	padding-bottom: 0.5cm;
 	font-size: 24pt;
 	text-align: center;
 	background-color: orange;
     }
-    /*END: badge specific styles */
-    
+
+    .printbutton {
+	visibility: hidden;
+	display: none;
+    }
+
     /*START:remove_default_styling*/
     table {
 	width: 100%; 
 	border-collapse: collapse; 
     } 
-    table.deleted {
-	text-decoration:line-through;
-    }
+    
     th, td { 
 	border: none;
     }
-    
     /*END:remove_default_styling*/
     
     /*START:color_header */
@@ -140,84 +160,36 @@
     /*END:bold-last-col */
     
     footer#delegate_footer { 
-	font-size: 8px;
-	clear: both;
-	width: 100%; 
-	display: block; 
-	text-align: center;
+	display: none;
     }
     
-    /*START: nav bar stuff */
+    /* nav bar stuff */
     
     header#page_header nav ul, 
     footer#page_footer nav ul { 
-	list-style: none;
-	margin: 0;
-	padding: 1em;
-	background-color: lightgrey;
+	display: none;
     }
     header#page_header nav ul li, 
     footer#page_footer nav ul li { 
-	padding:0;
-/*	margin: 0 20px 0 0;*/
-	display: inline;
-	background-color: lightgrey;
-    }
-/*    header#page_header nav ul li, 
-    footer#page_footer nav ul li form { 
-	padding:0;
-	display: inline;
-	background-color: lightgrey;
-    } */
-    input.nav { 
-	display: inline;
-    }
-    form.nav { 
-	display: inline;
+	display: none;
     }
     
-    /*END: nav bar stuff */
+    /* END nav bar stuff */
     
     ul#stats {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	background-color: lightgrey;
+	display: none;
     }
     
     ul#stats li {
-	padding:0;
-	margin: 0 20px 0 0;
-	display:inline;
+	display: none;
     }
     
     div#logged-in {
-	font-size: 10px;
-	background-color: lightblue;
+	display: none;
     }
     
     div#not-logged-in {
-	font-size: 10px;
-	background-color: red;
+	display: none;
     }
-
-    .tooltip {
-	border-bottom: 1px dotted #333;
-	position: relative;
-	cursor: pointer;
-    }
-    .tooltip:hover:after {
-	content: attr(title);
-	position: absolute;
-	white-space: nowrap;
-/*	background: rgba(0, 0, 0, 0.85);*/
-	background: yellow;
-	padding: 3px 7px;
-/*	color: #FFF;*/
-	color: darkblue;
-	border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
-	margin-left: 0;
-	margin-top: 1em;
-    }
-   /* .tooltip:hover:after { content: attr(title); }*/
+    
 }

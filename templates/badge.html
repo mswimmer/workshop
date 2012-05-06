@@ -1,16 +1,38 @@
 <!-- copyright 2012 Morton Swimmer (and others) and released under -->
 <!-- the MIT license. -->
-<section id="badge_data">
-  <header id="page_header">
-    <h1>{title}</h1>
-  </header>
-  <table>
-    <tr><td>badgename</td><td>{badgename}</td></tr>
-    <tr><td>company</td><td>{company}</td></tr>
-    <tr><td>sunday_drink</td><td>{sunday_drink}</td></tr>
-    <tr><td>weihenstephan_tour</td><td>{weihenstephan_tour}</td></tr>
-    <tr><td>speaker</td><td>{speaker}</td></tr>
-    <tr><td>lightning_speaker</td><td>{lightning_speaker}</td></tr>
-    <tr><td>crew</td><td>{crew}</td></tr>
-  </table>
+<section id="badge_data" class="badge_columns">
+  <section id="backside" class="badge_left">
+    <!-- img id="backside_background_image"
+	 src="{baseURL}/static/images/badge_backside.png" alt=""-->
+    <p></p>
+  </section>
+    <section id="frontside" class="badge_right">
+      {?speaker}
+        <p id="badge_name_speaker">{badgename}</p>
+      {:else}
+        {?lightning_speaker}
+          <p id="badge_name_speaker">{badgename}</p>
+        {:else}
+          <p id="badge_name">{badgename}</p>
+        {/lightning_speaker}
+      {/speaker}
+      <p id="badge_company">{company}</p>
+      {?speaker}
+        <p id="badge_speaker">SPEAKER</p>
+      {/speaker}
+      {?lightning_speaker}
+        <p id="badge_lspeaker">LIGHTNING SPEAKER</p>
+      {/lightning_speaker}
+      {?crew}
+        <p id="badge_crew">CREW</p>
+      {/crew}
+      
+      <footer id="badge_column_footer"  class="badge_bar">
+	<p id="badge_footer_logo">
+	  <img id="badge_logo" src="{baseURL}/static/images/logo.png"
+	       alt="">
+	</p>
+      </footer>
+    </section>
 </section>
+<input type='button' onClick='window.print()' class='printbutton' value='Print This Badge'/>
