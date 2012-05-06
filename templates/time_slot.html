@@ -1,0 +1,25 @@
+<!-- copyright 2012 Morton Swimmer (and others) and released under -->
+<!-- the MIT license. -->
+<section id="delegate_data">
+  <header id="page_header">
+    <h1>{title}</h1>
+    <nav>
+      <ul>
+	<li>
+	  <form method="GET" action="{baseURL}/change_time_slot/{_id}">
+	    <input type="submit" value="Update" />
+	  </form>
+	</li>
+	<li>
+	  <form method="POST" action="{baseURL}/del_time_slot/{_id}">
+	    <input type="submit" value="Delete" />
+	  </form>
+	</li>
+      </ul>
+    </nav>
+  </header>
+  <table>
+    {form|s}
+  </table>
+</section>
+  
