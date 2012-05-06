@@ -13,6 +13,9 @@
       <nav>
 	<ul>
 	  <li><a href="{baseURL}/">HOME</a></li>
+	  <li><a href="{baseURL}/login">Login</a></li>
+	  <li><a href="{baseURL}/logout">Logout</a></li>
+	  <li><a href="{baseURL}/add_delegate">Add delegate</a></li>
 	  <li><a href="{baseURL}/delegates">List all delegates</a></li>
 	  <li><a href="{baseURL}/by_lastname">By last name</a></li>
 	  <li><a href="{baseURL}/by_firstname">By first name</a></li>
@@ -27,19 +30,14 @@
 	<li id="all_count"></li>
 	<li id="non_speaker_count"></li>
 	<li id="speaker_count"></li>
+	<li id="lighting_speaker_count"></li>
+	<li id="crew_count"></li>
       </ul>
     </header>
     <div id="content">
       {content|s}
     </div>
     <footer id="page_footer">
-      <nav>
-	<ul>
-	  <li><a href="{baseURL}/login">Login</a></li>
-	  <li><a href="{baseURL}/logout">Logout</a></li>
-	  <li><a href="{baseURL}/add_delegate">Add delegate</a></li>
-	</ul>
-      </nav>
     </footer>
     <script src="{baseURL}/static/js/jquery-1.5.2.min.js"></script>
     <script src="{baseURL}/static/js/json2.js"></script>

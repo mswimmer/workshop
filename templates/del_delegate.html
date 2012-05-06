@@ -2,30 +2,18 @@
 <!-- the MIT license. -->
 <section id="delegate_data">
   <header id="page_header">
-    <h1>{title}</h1>
+    <h1>Deletion of {lastname}, {firstname} succeeded</h1>
     <nav>
       <ul>
 	<li>
-	  <form method="GET" action="{baseURL}/badge/{_id}" class="nav">
-	    <input type="submit" value="Badge"  class="nav" />
-	  </form>
-	</li>
-	<li>
-	  <!--a href="{baseURL}/change_delegate/{_id}">Change delegate
-	      information</a-->
-	  <form method="GET" action="{baseURL}/change_delegate/{_id}" class="nav">
-	    <input type="submit" value="Update" class="nav"  />
-	  </form>
-	</li>
-	<li>
-	  <form method="POST" action="{baseURL}/delete/{_id}" class="nav">
-	    <input type="submit" value="Delete" class="nav" />
+	  <form method="POST" action="{baseURL}/undel_delegate/{_id}" class="nav">
+	    <input type="submit" value="Undelete" class="nav" />
 	  </form>
 	</li>
       </ul>
     </nav>
   </header>
-  <table>
+  <table class="deleted">
     <tr><td>timestamp</td><td>{timestamp}</td></tr>
     <tr><td>salutation</td><td>{salutation}</td></tr>
     <tr><td>title</td><td>{title}</td></tr>

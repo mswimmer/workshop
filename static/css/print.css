@@ -4,21 +4,24 @@
 
 @media print {
     @page {
-/*	margin: 27mm 16mm 27mm 16mm;*/
-	margin: 0;
-/*	size: 15cm 10cm; */
-	size: 6in 4in;
+	margin: 0mm 0mm 0mm 0mm;
+	padding: 0;
+	size: 4in 6in landscape;
     }
 
     html { 
 	margin: 0;
+	size: 6in 4in landscape;
+	border: 1px solid #bbb;
 /*	font: 24pt/1.26 "Gill Sans", sans-serif;*/
     }
 
     body {
-	margin: 0 0 0 28%;
-/*	width: 15cm;
-	height: 10cm;*/
+	size: 6in 4in landscape;
+	width: 6in; 
+	height: 4in;
+	margin: 0 0 0 0;
+	padding: 0;
 	background: white;
 	-webkit-print-color-adjust: exact;
     }
@@ -39,37 +42,24 @@
 	float: right; 
 	width: 50%;
 	height: 100%;
-	background-image: -moz-linear-gradient(
-	    top, #fff, #efefef
-	);
-	background-image: -webkit-gradient(
-	    linear,left top, left bottom,
-	    color-stop(0, #fff),
-	    color-stop(1, #efefef)
-	);
-	background-image: linear-gradient(
-	    top, #fff, #efefef
-	);
+	font-family:"Impact",Times,Serif;
+	word-break:hyphenate;
+	word-wrap: break-word;
+	margin-top: 20px;
     }
     .badge_left {
 	float: left; 
 	width: 50%;
 	height: 100%;
-	background: blue;
+	background: white;
     }
     .badge_bar {
 	width: 50%; 
 	text-align: center;
 	position: absolute;
 	bottom: 0;
+	padding-bottom: 0.5cm;
 	background: white; 
-	background: -moz-linear-gradient(left, lightgreen 0%, #ffffff 35%, #ffffff 65%, lightgreen 100%);
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,lightgreen), color-stop(35%,#ffffff), color-stop(65%,#ffffff), color-stop(100%,lightgreen));
-	background: -webkit-linear-gradient(left, lightgreen 0%,#ffffff 35%,#ffffff 65%,lightgreen 100%);
-	background: -o-linear-gradient(left, lightgreen 0%,#ffffff 35%,#ffffff 65%,lightgreen 100%);
-	background: -ms-linear-gradient(left, lightgreen 0%,#ffffff 35%,#ffffff 65%,lightgreen 100%); 
-	background: linear-gradient(left, lightgreen 0%,#ffffff 35%,#ffffff 65%,lightgreen 100%); 
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ff00', endColorstr='#00ff00',GradientType=1 ); 
     }
     img#badge_logo {
 	height: 1cm;
@@ -77,58 +67,59 @@
     }
     p#badge_name {
 	text-align: center;
-	font-size: 48pt;
+	font-size: 30pt;
 	overflow: auto;
+	margin-left: 0.1cm;
+	margin-right: 0.1cm;
     }
     p#badge_name_speaker {
 	text-align: center;
 	font-size: 48pt;
 	overflow: auto;
+	margin-left: 0.1cm;
+	margin-right: 0.1cm;
+    }
+    p.spacer {
+	min-height: 1em;
     }
     p#badge_company {
+	padding-top: 0.5cm;
+	padding-bottom: 0.5cm;
 	text-align: center;
-	font-size: 24pt;
+	font-size: 20pt;
     }
-    p#badge_bar_social { 
+    p#badge_social { 
 	text-align: center;
 	background-color: lightblue;
     }
-    p#badge_bar_crew { 
-	height: 2em;
+    p#badge_crew { 
+	padding-top: 0.5cm;
+	padding-bottom: 0.5cm;
 	font-size: 24pt;
 	text-align: center;
 	background-color: lightgreen;
     }
-    p#badge_bar_speaker { 
-	height: 2em;
+    p#badge_speaker { 
+	padding-top: 0.5cm;
+	padding-bottom: 0.5cm;
 	font-size: 24pt;
 	text-align: center;
 	background-color: yellow;
     }
     p#badge_bar_lspeaker { 
-	height: 2em;
+	padding-top: 0.5cm;
+	padding-bottom: 0.5cm;
 	font-size: 24pt;
 	text-align: center;
 	background-color: orange;
     }
-/*
-    #badge_data {
-	column-count: 2;
-	-moz-column-count: 2;
-	-webkit-column-count: 2;
-	-moz-column-gap: 20px;
-	column-gap: 20px;
-	-webkit-column-gap: 20px;
-	-moz-column-rule: 1px solid #ddccb5;
-	-webkit-column-rule: 1px solid #ddccb5;
-	column-rule: 1px solid #ddccb5;
-    }
 
-    header nav, footer {
+    .printbutton {
+	visibility: hidden;
 	display: none;
     }
-*/
-        /*START:remove_default_styling*/
+
+    /*START:remove_default_styling*/
     table {
 	width: 100%; 
 	border-collapse: collapse; 
