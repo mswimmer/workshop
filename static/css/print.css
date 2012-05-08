@@ -12,7 +12,7 @@
     html { 
 	margin: 0;
 	size: 6in 4in landscape;
-	border: 1px solid #bbb;
+/*	border: 1px solid #bbb;*/
 /*	font: 24pt/1.26 "Gill Sans", sans-serif;*/
     }
 
@@ -62,8 +62,13 @@
 	background: white; 
     }
     img#badge_logo {
+	text-align: center; 
 	height: 1cm;
 	text-align: center;
+    }
+    img#backside_background_image {
+	height: 5.5in;
+	width: 3.5in;
     }
     p#badge_name {
 	text-align: center;
@@ -113,7 +118,6 @@
 	text-align: center;
 	background-color: orange;
     }
-
     .printbutton {
 	visibility: hidden;
 	display: none;
