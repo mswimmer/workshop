@@ -22,10 +22,15 @@ p options
 p ARGV
 exit(-1) unless options[:db_name] && options[:db_url]
 
+# We start the replications just in case they failed again
 if options[:db_remote_url]
-  puts "curl -X POST -H 'Content-Type: application/json' -d '{\"source\": \"#{options[:db_name]}\", \"target\": \"#{options[:db_remote_url]}/#{options[:db_name]}\", \"continuous\": true}' #{options[:db_url]}/_replicate"
-  p `curl -X POST -H 'Content-Type: application/json' -d '{"source": "#{options[:db_name]}", "target": "#{options[:db_remote_url]}/#{options[:db_name]}", "continuous": true}' #{options[:db_url]}/_replicate`
-  p `curl -X POST -H 'Content-Type: application/json' -d '{"target": "#{options[:db_name]}", "source": "#{options[:db_remote_url]}/#{options[:db_name]}", "continuous": true}' #{options[:db_url]}/_replicate`
+    cmd = "curl -s -X POST -H 'Content-Type: application/json' -d '{\"source\": \"#{options[:db_name]}\", \"target\": \"#{options[:db_remote_url]}/#{options[:db_name]}\", \"continuous\": true}' #{options[:db_url]}/_replicate"
+    puts "[#{cmd}]"
+    puts `#{cmd}`
+    
+    cmd = "curl -s -X POST -H 'Content-Type: application/json' -d '{\"target\": \"#{options[:db_name]}\", \"source\": \"#{options[:db_remote_url]}/#{options[:db_name]}\", \"continuous\": true}' #{options[:db_url]}/_replicate"
+    puts "[#{cmd}]"
+    puts `#{cmd}`
 end
 
 print_page = options[:db_url]+"/" + options[:db_name] + "/_design/" + options[:db_name] +"/_rewrite"
@@ -33,7 +38,7 @@ print_page = options[:db_url]+"/" + options[:db_name] + "/_design/" + options[:d
 @db = CouchRest.database(options[:db_url]+"/" + options[:db_name])
 @continue_to_do_stuff = true
 
-puts "Starting Badge Printing Deamon"
+puts "Starting Badge Printing Daemon"
 
 t = Thread.new do
   while @continue_to_do_stuff
