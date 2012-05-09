@@ -226,5 +226,7 @@
 	margin-left: -1em;
 	margin-top: 1em;
     }
-
+    .long_list {
+/*	columns: 3;*/
+    }
 }
