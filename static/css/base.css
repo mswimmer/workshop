@@ -34,7 +34,7 @@
 	position: absolute;
 	bottom: 2cm;
 	background: white;
-	border: 1px solid mauve;
+/*	border: 1px solid mauve;*/
     }
     .badge_right_logo_bar {
 	width: 49%;
@@ -43,7 +43,7 @@
 	position: absolute;
 	bottom: 0;
 	background: white;
-	border: 1px solid cyan;
+/*	border: 1px solid cyan;*/
     }
     .badge_left {
 	float: left; 
