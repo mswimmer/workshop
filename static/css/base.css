@@ -12,70 +12,82 @@
 	position: relative; 
 	background: white; 
 	float: left;
-	width: 15cm;
-	height: 10cm;
-	margin: 0;
+	width: 95%;
+	height: 100%;
+	margin: 0 0 0 0;
 	padding: 0;
     }
     .badge_right {
 	float: right; 
-	width: 50%;
-	height: 100%;
-	font-family:"Impact",Times,Serif;
-	word-break:hyphenate;
+	width: 49%;
+	height: 75%;
+	font-family: "Impact",Times,Serif;
+	word-break: hyphenate;
 	word-wrap: break-word;
+	text-align: center;
 	margin-top: 20px;
     }
-    .badge_left {
-	float: left; 
-	width: 50%;
-	height: 100%;
+    .badge_right_annotation_bar {
+	width: 49%;
+	height: 10%;
+	text-align: center;
+	position: absolute;
+	bottom: 2cm;
 	background: white;
+	border: 1px solid mauve;
     }
-    .badge_bar {
-	width: 50%; 
+    .badge_right_logo_bar {
+	width: 49%;
+	height: 10%;
 	text-align: center;
 	position: absolute;
 	bottom: 0;
-	padding-bottom: 0.5cm;
-	background: white; 
+	background: white;
+	border: 1px solid cyan;
+    }
+    .badge_left {
+	float: left; 
+	width: 49%;
+	height: 99%;
+	text-align: center;
+	background: white;
     }
     img#badge_logo {
+/*	height: 100%; */
 	height: 1cm;
 	text-align: center;
     }
+    img#backside_background_image {
+	padding-top: 0.5cm;
+	padding-bottom: 0.5cm;
+	height: 3.5in;
+	width: 2.5in;
+    /*	border: 1px solid grey;*/
+    }
     p#badge_name {
-	text-align: center;
-	min-height: 35%;
-	font-size: 30pt;
-	overflow: auto;
-	margin-left: 0.1cm;
-	margin-right: 0.1cm;
-    }
-    p#badge_name_speaker {
-	text-align: center;
-	min-height: 35%;
-	font-size: 30pt;
-	overflow: auto;
-	margin-left: 0.1cm;
-	margin-right: 0.1cm;
-    }
-    p.spacer {
-	min-height: 1em;
-    }
-    p#badge_company {
 	padding-top: 0.5cm;
 	padding-bottom: 0.5cm;
 	text-align: center;
-	font-size: 20pt;
+	min-height: 35%;
+	font-size: 30pt;
     }
-    p#badge_social { 
+    p#badge_name_speaker {
+	padding-top: 0.5cm;
+	padding-bottom: 0.5cm;
 	text-align: center;
-	background-color: lightblue;
+	font-size: 30pt;
+    }
+    p#badge_company {
+/*	padding-top: 0.5cm;
+	padding-bottom: 0.5cm;*/
+	text-align: center;
+	width: 2.5in;
+	font-size: 20pt;
     }
     p#badge_crew { 
 	padding-top: 0.5cm;
 	padding-bottom: 0.5cm;
+	width: 2.5in;
 	font-size: 24pt;
 	text-align: center;
 	background-color: lightgreen;
@@ -83,6 +95,7 @@
     p#badge_speaker { 
 	padding-top: 0.5cm;
 	padding-bottom: 0.5cm;
+	width: 2.5in;
 	font-size: 24pt;
 	text-align: center;
 	background-color: yellow;
@@ -90,6 +103,7 @@
     p#badge_lspeaker { 
 	padding-top: 0.5cm;
 	padding-bottom: 0.5cm;
+	width: 2.5in;
 	font-size: 24pt;
 	text-align: center;
 	background-color: orange;

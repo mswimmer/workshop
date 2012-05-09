@@ -17,22 +17,22 @@
         {/lightning_speaker}
       {/speaker}
       <p id="badge_company">{company}</p>
-      {?speaker}
-        <p id="badge_speaker">SPEAKER</p>
-      {/speaker}
-      {?lightning_speaker}
-        <p id="badge_lspeaker">LIGHTNING SPEAKER</p>
-      {/lightning_speaker}
-      {?crew}
-        <p id="badge_crew">CREW</p>
-      {/crew}
-      
-      <footer id="badge_column_footer" class="badge_bar">
-	<p id="badge_footer_logo">
+      <section class="badge_right_annotation_bar">
+        {?speaker}
+          <p id="badge_speaker">SPEAKER</p>
+        {/speaker}
+        {?lightning_speaker}
+          <p id="badge_lspeaker">LIGHTNING SPEAKER</p>
+        {/lightning_speaker}
+        {?crew}
+          <p id="badge_crew">CREW</p>
+        {/crew}
+      </section>
+      <footer id="badge_column_footer" class="badge_right_logo_bar">
+	<p id="badge_bar_logo">
 	  <img id="badge_logo" src="{baseURL}/static/images/logo.png"
 	       alt="">
 	</p>
       </footer>
     </section>
 </section>
-<input type='button' onClick='window.print()' class='printbutton' value='Print This Badge'/>
